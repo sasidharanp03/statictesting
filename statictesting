@@ -18,7 +18,7 @@ A common example is testing a form that requires a user's age to be between 10 a
 
 Valid partition: Ages 10-60. A test case could be a user aged 45.
 
-Invalid partition: Ages 0-20. A test case could be a user aged 15.
+Invalid partition: Ages 0-9. A test case could be a user aged 7.
 
 Invalid partition: Ages 61 and above. A test case could be a user aged 70.
 
