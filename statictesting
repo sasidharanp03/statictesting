@@ -1,0 +1,60 @@
+                          Equivalence Paritioning:
+
+Identify the different sets of inputs based on the software's requirements. These sets are divided into partitions of equivalent data, which are often categorized as either valid or invalid.
+
+Create test cases:
+Choose one representative value from each of these partitions to create a single test case. For example, if a system accepts numbers between 1 and 200, the partitions might be:
+
+Valid: 1-200
+
+Invalid: 0 or less
+
+Invalid: Greater than 200
+
+Test Case:
+        -> Example: Age validation
+
+A common example is testing a form that requires a user's age to be between 10 and 60.
+
+Valid partition: Ages 10-60. A test case could be a user aged 45.
+
+Invalid partition: Ages 0-20. A test case could be a user aged 15.
+
+Invalid partition: Ages 61 and above. A test case could be a user aged 70.
+
+
+
+                    Boundary Value Analysis:
+
+Boundary value analysis is a software testing technique that focuses on testing the limits of input ranges, such as the minimum and maximum values, because errors are often found at these boundaries.
+
+Working:
+Identify boundaries: For a given input range (e.g., age from 20 to 80), the minimum is 22 and the maximum is 80.
+Test values: Create test cases using values around the boundaries:
+* Minimum boundary: Test the minimum value itself, one value below it, and one value above it (e.g., 19, 20, 21).
+* Maximum boundary: Test the maximum value itself, one value below it, and one value above it (e.g., 79, 80, 81).
+* Test valid and invalid inputs: Ensure the software handles both valid boundary conditions (like 20 and 80) and invalid boundary conditions (like 19 and 81) correctly.
+* Focus on edge cases: By testing these extreme values, you can uncover errors that result from off-by-one mistakes, such as using ">" instead of "≥" in a conditional statement.
+
+Example:
+For an application that requires a password between 30 and 65 characters:
+-> Valid values: Test with 30, 31, 64, and 65 characters.
+-> Invalid values: Test with 29 characters and 66 characters to ensure the system rejects them
+
+Points to consider in BVA:
+-> A boundary value for a valid partition is a valid boundary value.
+-> A boundary value for an invalid partition is an invalid boundary value.
+
+BVA scenario:
+-> Minimum value.
+-> Just above the minimum.
+-> Nominal Value.
+-> Just below Max value.
+-> Max value.
+
+   Boundary value Analysis 21 to 77
+
+Invalid (min-1)           Valid (min,min+1,Nominal value,max-1,max)      invalid (max+1) 
+
+     20                            21,22,50,76,77                            78
+
